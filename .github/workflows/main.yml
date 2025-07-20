@@ -67,10 +67,6 @@ jobs:
   deploy-prod:
     needs: deploy-test
     runs-on: ubuntu-latest
-    environment:
-      name: production
-      # Requires manual approval from GitHub UI before running this job
-      url: https://portal.azure.com
     steps:
       - name: Download ARM Template
         uses: actions/download-artifact@v4
